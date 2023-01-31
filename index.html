@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <script defer src="index.js"></script>
+    <title>Quiz!</title>
+</head>
+
+<body class="bgc" onload="NextQuestion(0); onWebLoad()">
+    <header class="text-center bgc headerthings">General Knowledge Quiz</header>
+    <main>
+        <!-- Quiz end box -->
+        <div class="model-container" id="score-model">
+
+            <div class="model-content-container">
+
+                <div class="box-details">
+                    <p>End of quiz Infomation:</p>
+                    <p>Wrong Answers : <span id="wrong-answers"></span></p>
+                    <p>Right Answers : <span id="right-answers"></span></p>
+                    <p><span id="Messages"></span></p>
+                </div>
+
+                <div class="model-button-container">
+                    <button onclick="closeScoreModel()">Try again?</button>
+                </div>
+
+            </div>
+        </div>
+        <!-- Quiz on load-->
+        <div class="model-container" id="box-model">
+
+            <div class="model-content-container">
+
+                <div class="box-details">
+                    <h1>Welcome To My</h1>
+                    <p>General Knowledge</p>
+                    <p>Quiz <br> 🙂🙂🙂🙂 </p>
+                </div>
+
+                <div class="model-button-container">
+                    <button onclick="closeBoxModel()">Start Quiz</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="game-quiz-container">
+
+            <div class="game-details-container">
+                <h1> <b>Your Score : </b><span id="player-score"></span> / 10</h1>
+                <h1> <b>Question : </b><span id="question-number"></span> / 10</h1>
+            </div>
+
+            <div class="game-question-container">
+                <h1 id="display-question"></h1>
+            </div>
+
+            <div class="game-options-container">
+
+                <span>
+                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                    <label for="option-one" class="option" id="option-one-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                    <label for="option-two" class="option" id="option-two-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                    <label for="option-three" class="option" id="option-three-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                    <label for="option-four" class="option" id="option-four-label"></label>
+                </span>
+
+
+            </div>
+
+            <div class="next-button-container">
+                <button onclick="handleNextQuestion()">Next Question</button>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+
+
+<footer class="footer footerthings bgc">
+    <div class="content has-text-centered">
+        <p>
+            <strong>My Quiz site by Jacob</strong>
+    </div>
+</footer>
+</body>
